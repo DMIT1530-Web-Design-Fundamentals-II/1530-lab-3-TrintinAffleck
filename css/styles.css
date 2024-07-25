@@ -11,7 +11,7 @@
 body {
   background-image: url(../img/crowd-background.webp);
   background-repeat: no-repeat;
-  background-size: cover;
+  background-size:  cover;
   position: absolute;
   z-index: -9999;
 }
@@ -34,6 +34,22 @@ li {
   justify-content: center;
   padding: 0 1rem;
   gap: 3rem;
+}
+
+h1,h2 {
+  font-family: 'Nunito';
+  font-weight: 700;
+}
+
+p, li, button {
+  font-family: 'Nunito';
+  font-weight: 400;
+}
+
+button {
+  background: linear-gradient(0.25turn, var(--hot-pink), var(--yellow)) ;
+  height: 2rem;
+  border-radius: 1rem;
 }
 
 span {
@@ -64,20 +80,17 @@ ul ul {
 }
 
 .main-menu > li:hover > ul,
-.main-menu > li:focus-within > ul
-{
+.main-menu > li:focus-within > ul {
   display: inline-block;
   position: absolute;
   cursor: pointer;
-  top: 8vh;
+  top: 5vh;
   background-color: var(--dk-grey);
   z-index: 2;
   width: 15vw;
   padding: 0.3rem;
   font-size: large;
-  
 }
-
 
 main {
   background-color: var(--white);
@@ -88,8 +101,8 @@ main {
   display: flex;
   flex-direction: column;
   align-items: center;
-  left: 40%;
-  top: 20%;
+  left: 35%;
+  top: 25%;
   border-radius: 0.5rem;
 }
 
@@ -99,6 +112,7 @@ main > button {
 
 main > h2 {
   font-size: 3rem;
+  
 }
 
 
@@ -130,12 +144,33 @@ main > h2 {
     left: 0%;
     width: 25%;
     top: 8%;
+    z-index: 3;
     background-color: var(--dk-grey);
   }
 
   .show-nav > li > ul {
-    background-color: red;
+    position: relative;
+    left: 100%;
+    top: 1vh;
+    padding: 0.2rem;
+    height: fit-content;
   }
 
+  .main-menu > li:hover > ul,
+  .main-menu > li:focus-within > ul {
+    top: 0;
+    z-index: 3;
+  }
+
+  .show-nav > li > ul > li {
+    font-size: normal;
+  }
+
+  main {
+    width: 80%;
+    left: 8%;
+    top: 8.5%;
+    height: fit-content;
+  }
 }
 
